@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:gap/gap.dart';
+import 'package:ticket_app/screens/ticket_view.dart';
 import 'package:ticket_app/utils/app_style.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -55,10 +56,32 @@ class HomeScreen extends StatelessWidget {
                       Text("Search", style: Styles.headLineStyle4)
                     ],
                   ),
+                ),
+                const Gap(40),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Upcoming Flights",
+                      style: Styles.headLineStyle2,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        print("tapped");
+                      },
+                      child: Text(
+                        "View all",
+                        style: Styles.textStyle
+                            .copyWith(color: Styles.primaryColor),
+                      ),
+                    )
+                  ],
                 )
               ],
             ),
-          )
+          ),
+          const Gap(15),
+          TicketView(),
         ],
       ),
     );
