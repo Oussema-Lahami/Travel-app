@@ -73,7 +73,7 @@ class TicketView extends StatelessWidget {
                         )
                       ],
                     )),
-                    ThickContainer(),
+                    const ThickContainer(),
                     const Spacer(),
                     Text(ticket['to']['code'],
                         style:
@@ -150,7 +150,7 @@ class TicketView extends StatelessWidget {
                   SizedBox(
                     height: AppLayout.getHeight(20),
                     width: AppLayout.getWidth(10),
-                    child: DecoratedBox(
+                    child: const DecoratedBox(
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
